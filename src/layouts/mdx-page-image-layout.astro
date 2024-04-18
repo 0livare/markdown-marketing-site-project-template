@@ -1,0 +1,19 @@
+---
+import PostLayout from './post-layout.astro'
+
+const {content} = Astro.props
+
+// pages/xxx.mdx passes its front matter through as Astro.props.content
+// to its layout component.
+const {title, description, pubDate, updatedDate, heroImage} = content
+---
+
+<PostLayout
+  title={title}
+  description={description}
+  pubDate={new Date(pubDate)}
+  updatedDate={updatedDate}
+  heroImage={heroImage}
+>
+  <slot />
+</PostLayout>
