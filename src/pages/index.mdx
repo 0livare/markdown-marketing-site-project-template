@@ -3,20 +3,28 @@ layout: '../layouts/main-layout.astro'
 title: 'My Markdown page'
 ---
 
-# 🧑‍🚀 Hello, Astronaut!
+# Hello, Ryan! 👋
 
-Welcome to the official blog starter template. This
-template serves as a lightweight, minimally-styled starting point for anyone looking to build
-a personal website, blog, or portfolio with Astro.
+I hope you find this project useful!
+
+It's an [Astro.js][astro] project. Astro has its own file extension `.astro` which is a file that can combine HTML, CSS, and JS into a single file. The JS goes in the top section that starts and ends with three dashes `---`. The CSS can go in a `<style>` tag below the JS section at the root of the file. Any html element can also go at the root of the file, including a root `<html>` tag.
+
+For styling I've installed [Tailwind CSS][tailwind] which uses a bunch of CSS utility classes to style stuff. It's a bit of a controversial solution in the web community, but I really like it because it make styling things faster. For the most part it has has one utility class per CSS property, so it's pretty easy to learn.
+
+I've also installed [tailwind-typography] so that you don't have to think about styling the typography, it should just work.
+
+[astro]: https://astro.build
+[tailwind]: https://tailwindcss.com
+[tailwind-typography]: https://github.com/tailwindlabs/tailwindcss-typography
+
+Astro is built for content, which is why I suggested it for you. It supports MDX out of the box, which is Markdown that can also have components used in it. [Here](https://docs.astro.build/en/guides/integrations-guide/mdx/#usage) is more information about how to use MDX in Astro.
+
+It supports MDX files directly inside of `pages/`. All files inside of `pages/` create pages in the application, using file based routing.
+
+Astro also supports collections of content inside the `content/` directory, which might not make sense for your use case. I left it there though so you could see it in case it was useful.
 
 This template comes with a few integrations already configured in your
 `astro.config.mjs` file. You can customize your setup with
-React, or Vue to your project.
+React to your project.
 
-Here are a few ideas on how to get started with the template:
-
-- Edit this page in `src/pages/index.astro`
-- Edit the site header items in `src/components/Header.astro`
-- Add your name to the footer in `src/components/Footer.astro`
-- Check out the included blog posts in `src/pages/blog/`
-- Customize the blog post page layout in `src/layouts/BlogPost.astro`
+React components can also be integrated hand in hand with Astro components if that becomes useful for you, but I haven't added that yet. [Here](https://docs.astro.build/en/guides/integrations-guide/react) are instructions on how you could add React to this project.
