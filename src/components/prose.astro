@@ -1,0 +1,19 @@
+---
+import {twMerge} from 'tailwind-merge'
+---
+
+<!-- 
+  This styles typography with Tailwind Typography
+  see: https://github.com/tailwindlabs/tailwindcss-typography
+ -->
+<article
+  class={twMerge(
+    'Prose',
+    'prose prose-slate prose-lg md:prose-xl px-4 mx-auto md:px-0 md: pb-8',
+    'prose-img:rounded-lg',
+    'prose-a:font-bold prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline',
+    'prose-headings:block',
+  )}
+>
+  <slot />
+</article>

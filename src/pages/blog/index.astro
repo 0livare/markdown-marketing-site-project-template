@@ -16,7 +16,7 @@ const posts = (await getCollection('posts')).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
-      main {
+      main section {
         width: 960px;
       }
       ul {
@@ -85,9 +85,10 @@ const posts = (await getCollection('posts')).sort(
       }
     </style>
   </head>
+
   <body>
     <Header />
-    <main>
+    <main class="flex justify-center py-16">
       <section>
         <ul>
           {
